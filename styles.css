@@ -307,12 +307,6 @@ a { color: inherit; text-decoration: none; }
   max-width: 620px;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
 /* Tabs */
 
 .tab-panel { display: none; animation: tab-in 0.25s ease; scroll-margin-top: 84px; }
