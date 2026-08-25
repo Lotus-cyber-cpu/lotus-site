@@ -393,6 +393,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px;
+  cursor: pointer;
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
 

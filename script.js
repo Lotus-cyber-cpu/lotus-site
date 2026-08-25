@@ -32,6 +32,10 @@ tabLinks.forEach((link) => {
   });
 });
 
+document.querySelectorAll('#services .card').forEach((card) => {
+  card.addEventListener('click', () => activateTab('contact'));
+});
+
 const form = document.getElementById('contactForm');
 
 form.addEventListener('submit', (e) => {
