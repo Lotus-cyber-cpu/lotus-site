@@ -1,14 +1,3 @@
-const navToggle = document.getElementById('navToggle');
-const headerInner = document.querySelector('.header-inner');
-
-navToggle.addEventListener('click', () => {
-  headerInner.classList.toggle('open');
-});
-
-document.querySelectorAll('.nav a').forEach((link) => {
-  link.addEventListener('click', () => headerInner.classList.remove('open'));
-});
-
 const tabPanels = document.querySelectorAll('.tab-panel');
 const tabLinks = document.querySelectorAll('a[data-tab]');
 

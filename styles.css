@@ -237,26 +237,6 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
 
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 32px;
-  height: 32px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.nav-toggle span {
-  width: 100%;
-  height: 2px;
-  background: var(--text);
-  border-radius: 2px;
-}
-
 /* Buttons */
 
 .btn {
@@ -659,20 +639,35 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 640px) {
-  .nav, .header-inner > .btn-primary { display: none; }
-  .nav-toggle { display: flex; margin-left: auto; }
-  .header-inner.open .nav {
-    display: flex;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 24px;
-    gap: 16px;
-    z-index: 30;
+  .header-inner {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+  .nav {
+    order: 3;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    margin-right: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a {
+    flex-shrink: 0;
+    white-space: nowrap;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13.5px;
+  }
+  .nav a[data-tab].is-active::after { display: none; }
+  .nav a.is-active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
   }
   .hero-ring { display: none; }
   .hero-brand { font-size: 34px; }
